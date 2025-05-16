@@ -1,5 +1,5 @@
 // @ts-check
-import { defineEslint } from "@reallyx/front-config";
+import { defineEslint } from "@niushuaibing/front-config";
 
 export default defineEslint({
     stylistic: {

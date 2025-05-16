@@ -2,7 +2,7 @@ import { commands, window, workspace } from "vscode";
 import type { ExtensionContext } from "vscode";
 
 export function activate(context: ExtensionContext) {
-    const disposable = commands.registerCommand("reallyx.location", async () => {
+    const disposable = commands.registerCommand("niushuaibing.location", async () => {
         const editor = window.activeTextEditor;
         if(!editor) return;
         const wsFolder = workspace.getWorkspaceFolder(editor.document.uri);

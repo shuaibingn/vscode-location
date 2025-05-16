@@ -3,12 +3,12 @@
     "displayName": "File Location",
     "version": "0.0.5",
     "private": true,
-    "publisher": "reallyx",
+    "publisher": "niushuaibing",
     "description": "Current file location",
     "main": "./out/extension.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/yx1126/vscode-location"
+        "url": "https://github.com/shuaibingn/vscode-location"
     },
     "scripts": {
         "vscode:prepublish": "pnpm run build",
@@ -19,7 +19,7 @@
         "test": "vscode-test"
     },
     "devDependencies": {
-        "@reallyx/front-config": "^0.0.10",
+        "@niushuaibing/front-config": "^0.0.10",
         "@types/mocha": "^10.0.10",
         "@types/node": "20.x",
         "@types/vscode": "^1.96.0",
@@ -38,7 +38,7 @@
     "contributes": {
         "commands": [
             {
-                "command": "reallyx.location",
+                "command": "niushuaibing.location",
                 "title": "%title%",
                 "icon": {
                     "dark": "resources/position-dark.svg",
@@ -49,13 +49,13 @@
         "menus": {
             "editor/title": [
                 {
-                    "command": "reallyx.location",
+                    "command": "niushuaibing.location",
                     "group": "navigation"
                 }
             ],
             "view/title": [
                 {
-                    "command": "reallyx.location",
+                    "command": "niushuaibing.location",
                     "when": "view == workbench.explorer.fileView",
                     "group": "navigation"
                 }
