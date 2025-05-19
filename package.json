@@ -1,7 +1,7 @@
 {
-    "name": "vscode-location",
-    "displayName": "File Location",
-    "version": "0.0.5",
+    "name": "vs-location",
+    "displayName": "current file location",
+    "version": "0.0.3",
     "private": true,
     "publisher": "niushuaibing",
     "description": "Current file location",
@@ -11,7 +11,7 @@
         "url": "https://github.com/shuaibingn/vscode-location"
     },
     "scripts": {
-        "vscode:prepublish": "pnpm run build",
+        "vscode:prepublish": "npm run build",
         "push": "vsce publish --no-dependencies",
         "build": "tsup",
         "lint": "eslint .",
@@ -19,12 +19,13 @@
         "test": "vscode-test"
     },
     "devDependencies": {
-        "@niushuaibing/front-config": "^0.0.10",
+        "@reallyx/front-config": "^0.0.10",
         "@types/mocha": "^10.0.10",
         "@types/node": "20.x",
         "@types/vscode": "^1.96.0",
         "@vscode/test-cli": "^0.0.10",
         "@vscode/test-electron": "^2.4.1",
+        "@vscode/vsce": "^3.4.0",
         "eslint": "^9.17.0",
         "tsup": "^8.3.5",
         "typescript": "^5.7.2"
@@ -33,12 +34,16 @@
         "vscode": "^1.96.0"
     },
     "icon": "resources/logo.png",
-    "categories": ["Other"],
-    "activationEvents": ["onStartupFinished"],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
     "contributes": {
         "commands": [
             {
-                "command": "niushuaibing.location",
+                "command": "n.location",
                 "title": "%title%",
                 "icon": {
                     "dark": "resources/position-dark.svg",
@@ -49,13 +54,13 @@
         "menus": {
             "editor/title": [
                 {
-                    "command": "niushuaibing.location",
+                    "command": "n.location",
                     "group": "navigation"
                 }
             ],
             "view/title": [
                 {
-                    "command": "niushuaibing.location",
+                    "command": "n.location",
                     "when": "view == workbench.explorer.fileView",
                     "group": "navigation"
                 }
